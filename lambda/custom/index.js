@@ -148,215 +148,142 @@ exports.handler = skillBuilder
   .lambda();
 
 // translations
-const deData = {
-  translation: {
-    SKILL_NAME: 'Weltraumwissen',
-    GET_FACT_MESSAGE: 'Hier sind deine Fakten: ',
-    HELP_MESSAGE: 'Du kannst sagen, „Nenne mir einen Fakt über den Weltraum“, oder du kannst „Beenden“ sagen... Wie kann ich dir helfen?',
-    HELP_REPROMPT: 'Wie kann ich dir helfen?',
-    FALLBACK_MESSAGE: 'Die Weltraumfakten Skill kann dir dabei nicht helfen. Sie kann dir Fakten über den Raum erzählen, wenn du dannach fragst.',
-    FALLBACK_REPROMPT: 'Wie kann ich dir helfen?',
-    ERROR_MESSAGE: 'Es ist ein Fehler aufgetreten.',
-    STOP_MESSAGE: 'Auf Wiedersehen!',
-    FACTS:
-      [
-        'Ein Jahr dauert auf dem Merkur nur 88 Tage.',
-        'Die Venus ist zwar weiter von der Sonne entfernt, hat aber höhere Temperaturen als Merkur.',
-        'Venus dreht sich entgegen dem Uhrzeigersinn, möglicherweise aufgrund eines früheren Zusammenstoßes mit einem Asteroiden.',
-        'Auf dem Mars erscheint die Sonne nur halb so groß wie auf der Erde.',
-        'Jupiter hat den kürzesten Tag aller Planeten.',
-      ],
-  },
-};
-
-const dedeData = {
-  translation: {
-    SKILL_NAME: 'Weltraumwissen auf Deutsch',
-  },
-};
-
 const enData = {
   translation: {
-    SKILL_NAME: 'Space Facts',
-    GET_FACT_MESSAGE: 'Here\'s your fact: ',
-    HELP_MESSAGE: 'You can say tell me a space fact, or, you can say exit... What can I help you with?',
+    SKILL_NAME: 'The Show With No Name Intros',
+    GET_FACT_MESSAGE: 'Here\'s Cinco!',
+    HELP_MESSAGE: 'You can say play an intro or start the show, or, you can say exit... What can I help you with?',
     HELP_REPROMPT: 'What can I help you with?',
-    FALLBACK_MESSAGE: 'The Space Facts skill can\'t help you with that.  It can help you discover facts about space if you say tell me a space fact. What can I help you with?',
+    FALLBACK_MESSAGE: 'The Show With No Name Intro skill can\'t help you with that.  It can give you a show intro if you ask it to start the show. What can I help you with?',
     FALLBACK_REPROMPT: 'What can I help you with?',
     ERROR_MESSAGE: 'Sorry, an error occurred.',
     STOP_MESSAGE: 'Goodbye!',
     FACTS:
       [
-        'A year on Mercury is just 88 days long.',
-        'Despite being farther from the Sun, Venus experiences higher temperatures than Mercury.',
-        'On Mars, the Sun appears about half the size as it does on Earth.',
-        'Jupiter has the shortest day of all the planets.',
-        'The Sun is an almost perfect sphere.',
+        'Warning: friends may leave at any time.',
+        'Warning: If you miss someone enough, they will return.',
+        'Tonight, we\'re going to party like it\'s 1999.',
+        'We\'re dumbing down the show to improve our Nielsens.',
+        'I love your mother',
+        'Episode I: A Whole New Generation of Dorks',
+        'I will not take a course of action that will lead this planet to Corey.',
+        'I\'m dead, Jim.',
+        'Stephen, LOOK OUT!',
+        'Warning: No surprises tonight',
+        'I guess we just don\'t appeal to "readers".',
+        'The Show With No Name is brought to you by the letters \'F\' and \'U\'.',
+        'The Show With No Name is about to give away $10,000 in cash and prizes.',
+        'We won two awards and we still don\'t have a name.',
+        'Some call it the forbidden dance...',
+        'Boogers don\'t burn',
+        'damn good fudge',
+        'nominated for six golden showers',
+        'last caller gets a free hot dog',
+        'we like tv but we don\'t "like" tv',
+        'tonight: a very special show with no name',
+        'easter: the chocolate celebration of Jesus',
+        'you know, that Batman\'s got a purty mouth',
+        'This show is dedicated to all the hot mamas.',
+        'Alex Jones is trying to silence me. SHHHH!',
+        'Never shake a baby... unless it\'s already retarded.',
+        'Hail to the Thief',
+        'Daddy got white pee on my front butt.',
+        'Lenny Kravitz would be a successful musician if he just applied himself',
+        'For Valentine\'s, I want twat surgery.',
+        'David Komie is a lawyer. April fools!',
+        'How about an apology for being Commies?',
+        'Jesus has risen, and He\'s come for your brains.',
+        'WARNING: This show contains adult content and is too hot for television..',
+        'If old movies are so good, why are they still making new ones?',
+        'You\'re all dead to me.',
+        'I\'ve got a huge hard on for America',
+        'You think the Bush\'s drink a lot.',
+        'Smoking isn\'t bad for you if you do it outside.',
+        'I\'m your father.',
+        'To the victor go the spoils.',
+        'Surgeon General Warning: Smoke offs can be fatal.',
+        'Don\'t dolphins suck?',
+        'So, how\'s the apocalypse treating ya?',
+        'You like us.  Half of you really like us.',
+        'Bob Hope is alive... unless this is a rerun.',
+        'Be american. Blow a fireman.',
+        'Be more afraid of lightning.',
+        'Note to self: become a war profiteer',
+        'Sometimes naughty is nice',
+        'My fart smells like whiskey.',
+        'Tejano soccer dads, you made a powerful enemy tonight.',
+        'The Queen is dead.  Long live Zombie Queen',
+        'Check here for three dollars to go to the shadow government.',
+        'Come inside my rectory.',
+        'Austin: the live... (quiet) live music capital.',
+        'Remember the fallen soldiers?  Yeah, me too.',
+        'What would Jesus do for Fathers Day?',
+        'Tonight\'s show is never before seen.',
+        'Tonight\'s show is brought to you by the letter \'T\'.',
+        'News Flash! One-balled man wins race.',
+        'If you\'d like a transcript of tonight\'s show, you\'re a dork.',
+        'Stupid? Stupid like a fox.',
+        'I feel sick.  Sick like a fox.',
+        'We will rock you.  We will roll you.  We will fe-fi-fo you.',
+        'Sasquatch gut you down?',
+        'You\'re a dirty, dirty, dirty, dirty, dirty, dirty, dirty, dirty girl.',
+        'You voted us best show.  Fools!',
+        'On access, no one can hear you scream.',
+        'Remember, it gets dark an hour earlier now... Spooky!',
+        'If you loved me, you\'d let me eat your brain.',
+        'Ms. Ryder, I sentence you to Caged Heat.',
+        'WARNUM: Indians are stupid, and how!',
+        'Bevo doesn\'t give a shit about your team\'s tragedies.'
+        'Hey Strom!  Die already!  A baby is ready to be born.',
+        'Warning: Christmas in coming... All over your face.',
+        'Orphans piss me off.',
+        'Other cultures are weird.',
+        'DISCLAIMER: The show is not responsible for contestant deaths.',
+        'She loves me.  She loves me nuts.',
+        'Make love, not war... like Michael Jackson.',
+        'I told you Great White fucking sucks.',
+        'Spring forward or the terrorists win.',
+        'Happy Birthday, Bob Hope... I SAY HAPPY BIRTHDAY.',
+        'I just flew in from China and boy...',
+        'Heard about the new pirate flu?  It\'s called AAARRRS.',
+        'I like the word poon-tang because it reminds me of orange juice and fucking.',
+        'Welcome to Austin, bikers.  Don\'t touch anything.',
+        'Attention: One-balled wonder leads the race.',
+        'Adbay ayday for Uday and Qusay',
+        'Don\'t be 100.',
+        'Today we mourn Gregory Hines.  He was seventy degrees.',
+        'Abused kids, one.  Catholic priests, zero.',
+        'Never, never, never, never, never, never, never, never, never forget.',
+        'Two\'s company, three\'s a crowd.',
+        'Bow to the kings of access television...',
+        'The Republicans tried to keep us off the air, but we fought back with rock-n-roll.',
+        'I\'m thankful that my mom didn\'t sell me to Michael Jackson.',
+        'WARNING: The Japanese are sneaky.',
+        'Men are from Mars.  Women like penis.',
+        'It\'s not TV.  It\'s access.',
+        'I have a dream.  I have a cream dream.',
+        'NOTICE We\'re not going to play your stupid band\'s stupid video.',
+        'Will you be my valentine, or at least, give me a blowjob?',
+        'Sure, I\'m married, but I wanna be gay-married.',
+        'Rape is not funny.  Unless you rape a clown.',
+        'The governor fucks a little boy... and WE get pulled off the air.',
+        'Christ has died.  Christ is risen.  Christ will be back after these messages.',
+        'The funniest part of the toilet is the ball-cock.',
+        'I used to think chemistry was useless... Until I poisoned all my enemies.',
+        'Ronald Reagan died last week.  He was seventy degrees.',
+        'Kittie porn?  Meee-Yow!',
+        'I like hobos, but I can\'t eat a whole one.',
+        'Lance Armstrong is in second place... And he only has one ball.',
+        'Rick James is dead, bee-yotch!',
+        'Julia Childs died this week.  She was seventy degrees.',
+        'Remember when going for the gold meant paying a hooker to pee on you?',
+        'The Emmy for poontang goes to yo\' mama.',
       ],
-  },
-};
-
-const enauData = {
-  translation: {
-    SKILL_NAME: 'Austrailian Space Facts',
-  },
-};
-
-const encaData = {
-  translation: {
-    SKILL_NAME: 'Canadian Space Facts',
-  },
-};
-
-const engbData = {
-  translation: {
-    SKILL_NAME: 'British Space Facts',
-  },
-};
-
-const eninData = {
-  translation: {
-    SKILL_NAME: 'Indian Space Facts',
-  },
-};
-
-const enusData = {
-  translation: {
-    SKILL_NAME: 'American Space Facts',
-  },
-};
-
-const esData = {
-  translation: {
-    SKILL_NAME: 'Curiosidades del Espacio',
-    GET_FACT_MESSAGE: 'Aquí está tu curiosidad: ',
-    HELP_MESSAGE: 'Puedes decir dime una curiosidad del espacio o puedes decir salir... Cómo te puedo ayudar?',
-    HELP_REPROMPT: 'Como te puedo ayudar?',
-    FALLBACK_MESSAGE: 'La skill Curiosidades del Espacio no te puede ayudar con eso.  Te puede ayudar a descubrir curiosidades sobre el espacio si dices dime una curiosidad del espacio. Como te puedo ayudar?',
-    FALLBACK_REPROMPT: 'Como te puedo ayudar?',
-    ERROR_MESSAGE: 'Lo sentimos, se ha producido un error.',
-    STOP_MESSAGE: 'Adiós!',
-    FACTS:
-        [
-          'Un año en Mercurio es de solo 88 días',
-          'A pesar de estar más lejos del Sol, Venus tiene temperaturas más altas que Mercurio',
-          'En Marte el sol se ve la mitad de grande que en la Tierra',
-          'Jupiter tiene el día más corto de todos los planetas',
-          'El sol es una esféra casi perfecta',
-        ],
-  },
-};
-
-const esesData = {
-  translation: {
-    SKILL_NAME: 'Curiosidades del Espacio para España',
-  },
-};
-
-const esmxData = {
-  translation: {
-    SKILL_NAME: 'Curiosidades del Espacio para México',
-  },
-};
-
-const frData = {
-  translation: {
-    SKILL_NAME: 'Anecdotes de l\'Espace',
-    GET_FACT_MESSAGE: 'Voici votre anecdote : ',
-    HELP_MESSAGE: 'Vous pouvez dire donne-moi une anecdote, ou, vous pouvez dire stop... Comment puis-je vous aider?',
-    HELP_REPROMPT: 'Comment puis-je vous aider?',
-    FALLBACK_MESSAGE: 'La skill des anecdotes de l\'espace ne peux vous aider avec cela. Je peux vous aider à découvrir des anecdotes sur l\'espace si vous dites par exemple, donne-moi une anecdote. Comment puis-je vous aider?',
-    FALLBACK_REPROMPT: 'Comment puis-je vous aider?',
-    ERROR_MESSAGE: 'Désolé, une erreur est survenue.',
-    STOP_MESSAGE: 'Au revoir!',
-    FACTS:
-        [
-          'Une année sur Mercure ne dure que 88 jours.',
-          'En dépit de son éloignement du Soleil, Vénus connaît des températures plus élevées que sur Mercure.',
-          'Sur Mars, le Soleil apparaît environ deux fois plus petit que sur Terre.',
-          'De toutes les planètes, Jupiter a le jour le plus court.',
-          'Le Soleil est une sphère presque parfaite.',
-        ],
-  },
-};
-
-const frfrData = {
-  translation: {
-    SKILL_NAME: 'Anecdotes françaises de l\'espace',
-  },
-};
-
-const itData = {
-  translation: {
-    SKILL_NAME: 'Aneddoti dallo spazio',
-    GET_FACT_MESSAGE: 'Ecco il tuo aneddoto: ',
-    HELP_MESSAGE: 'Puoi chiedermi un aneddoto dallo spazio o puoi chiudermi dicendo "esci"... Come posso aiutarti?',
-    HELP_REPROMPT: 'Come posso aiutarti?',
-    FALLBACK_MESSAGE: 'Non posso aiutarti con questo. Posso aiutarti a scoprire fatti e aneddoti sullo spazio, basta che mi chiedi di dirti un aneddoto. Come posso aiutarti?',
-    FALLBACK_REPROMPT: 'Come posso aiutarti?',
-    ERROR_MESSAGE: 'Spiacenti, si è verificato un errore.',
-    STOP_MESSAGE: 'A presto!',
-    FACTS:
-      [
-        'Sul pianeta Mercurio, un anno dura solamente 88 giorni.',
-        'Pur essendo più lontana dal Sole, Venere ha temperature più alte di Mercurio.',
-        'Su Marte il sole appare grande la metà che su la terra. ',
-        'Tra tutti i pianeti del sistema solare, la giornata più corta è su Giove.',
-        'Il Sole è quasi una sfera perfetta.',
-      ],
-  },
-};
-
-const ititData = {
-  translation: {
-    SKILL_NAME: 'Aneddoti dallo spazio',
-  },
-};
-
-const jpData = {
-  translation: {
-    SKILL_NAME: '日本語版豆知識',
-    GET_FACT_MESSAGE: '知ってましたか？',
-    HELP_MESSAGE: '豆知識を聞きたい時は「豆知識」と、終わりたい時は「おしまい」と言ってください。どうしますか？',
-    HELP_REPROMPT: 'どうしますか？',
-    ERROR_MESSAGE: '申し訳ありませんが、エラーが発生しました',
-    STOP_MESSAGE: 'さようなら',
-    FACTS:
-      [
-        '水星の一年はたった88日です。',
-        '金星は水星と比べて太陽より遠くにありますが、気温は水星よりも高いです。',
-        '金星は反時計回りに自転しています。過去に起こった隕石の衝突が原因と言われています。',
-        '火星上から見ると、太陽の大きさは地球から見た場合の約半分に見えます。',
-        '木星の<sub alias="いちにち">1日</sub>は全惑星の中で一番短いです。',
-        '天の川銀河は約50億年後にアンドロメダ星雲と衝突します。',
-      ],
-  },
-};
-
-const jpjpData = {
-  translation: {
-    SKILL_NAME: '日本語版豆知識',
   },
 };
 
 // constructs i18n and l10n data structure
 // translations for this sample can be found at the end of this file
 const languageStrings = {
-  'de': deData,
-  'de-DE': dedeData,
-  'en': enData,
-  'en-AU': enauData,
-  'en-CA': encaData,
-  'en-GB': engbData,
-  'en-IN': eninData,
-  'en-US': enusData,
-  'es': esData,
-  'es-ES': esesData,
-  'es-MX': esmxData,
-  'fr': frData,
-  'fr-FR': frfrData,
-  'it': itData,
-  'it-IT': ititData,
-  'ja': jpData,
-  'ja-JP': jpjpData,
+  'en': enData
 };
